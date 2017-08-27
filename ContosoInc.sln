@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoInc.Desktop", "Source\Client\Windows\Desktop\ContosoInc.Desktop\ContosoInc.Desktop.csproj", "{7109EC75-AD5F-4AD2-A58B-C7FAF97A9D8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1610E4E3-EA8D-4F99-93A0-73A4822125C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E6ECDB41-305D-4A7E-8B04-BBD74C977392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoInc.Presentation", "Source\Client\Windows\Desktop\ContosoInc.Presentation\ContosoInc.Presentation.csproj", "{642C9AB8-084C-45EE-962E-EC863C777EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoInc.Core", "Source\Client\Windows\Desktop\ContosoInc.Core\ContosoInc.Core.csproj", "{D1FF1EF5-042E-4441-99FE-8001922B4EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoInc.Modules.GoComics", "Source\Client\Windows\Desktop\ContosoInc.Modules.GoComics\ContosoInc.Modules.GoComics.csproj", "{800D4461-82E4-490C-8725-B399BFCBF9AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7109EC75-AD5F-4AD2-A58B-C7FAF97A9D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7109EC75-AD5F-4AD2-A58B-C7FAF97A9D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7109EC75-AD5F-4AD2-A58B-C7FAF97A9D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7109EC75-AD5F-4AD2-A58B-C7FAF97A9D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642C9AB8-084C-45EE-962E-EC863C777EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642C9AB8-084C-45EE-962E-EC863C777EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642C9AB8-084C-45EE-962E-EC863C777EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642C9AB8-084C-45EE-962E-EC863C777EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FF1EF5-042E-4441-99FE-8001922B4EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FF1EF5-042E-4441-99FE-8001922B4EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FF1EF5-042E-4441-99FE-8001922B4EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FF1EF5-042E-4441-99FE-8001922B4EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{800D4461-82E4-490C-8725-B399BFCBF9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800D4461-82E4-490C-8725-B399BFCBF9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800D4461-82E4-490C-8725-B399BFCBF9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800D4461-82E4-490C-8725-B399BFCBF9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{642C9AB8-084C-45EE-962E-EC863C777EB4} = {E6ECDB41-305D-4A7E-8B04-BBD74C977392}
+		{D1FF1EF5-042E-4441-99FE-8001922B4EAE} = {E6ECDB41-305D-4A7E-8B04-BBD74C977392}
+		{800D4461-82E4-490C-8725-B399BFCBF9AF} = {1610E4E3-EA8D-4F99-93A0-73A4822125C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F64B82F3-5BEB-42E8-8F45-71E88A358D9E}
+	EndGlobalSection
+EndGlobal

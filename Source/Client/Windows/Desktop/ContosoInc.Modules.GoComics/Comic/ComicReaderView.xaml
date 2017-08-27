@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ContosoInc.Modules.GoComics.Comic.Views.ComicReaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ContosoInc.Modules.GoComics.Comic.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Border Padding="12" Margin="5" Width="Auto"
+            BorderBrush="#77000000" BorderThickness="1">
+        <StackPanel HorizontalAlignment="Stretch" Width="Auto">
+
+            <Expander x:Name="comicPageExpander" IsExpanded="True"
+                  Header="{Binding Path=ComicDetails}"
+                  Content="{Binding Path=ComicDetails}">
+                <!-- Header -->
+                <Expander.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Title and Author -->
+                            <TextBlock Grid.Column="0" x:Name="comicTitleAndAuthor"
+                                   Margin="0,5,0,0"
+                                   Text="{Binding Path=DataContext.HeaderInfo,
+                                        RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Expander}}}"/>
+
+                            <!-- Commands - Share, Like, Add to favorite... -->
+                            <local:ComicPageCommandsView Grid.Column="1" HorizontalAlignment="Right"/>
+                        </Grid>
+                    </DataTemplate>
+                </Expander.HeaderTemplate>
+
+                <!-- Content -->
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <local:ComicPageView />
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+            </Expander>
+            
+            <Rectangle Margin="0,5,0,0" Stroke="{x:Null}" RadiusX="0" RadiusY="0" VerticalAlignment="Bottom" Height="4" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </StackPanel>
+    </Border>
+</UserControl>

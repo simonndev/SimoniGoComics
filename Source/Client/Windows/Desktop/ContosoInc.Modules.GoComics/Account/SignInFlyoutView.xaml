@@ -1,0 +1,50 @@
+﻿<mahctrls:Flyout
+    x:Class="ContosoInc.Modules.GoComics.Account.Views.SignInFlyoutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:mahctrls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:v="clr-namespace:ContosoInc.Presentation.Helpers;assembly=ContosoInc.Presentation"
+    xmlns:local="clr-namespace:ContosoInc.Modules.GoComics.Account"
+    Header="Sign in GoComics"
+    Position="Right"     
+    Theme="Accent"
+    Width="250">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="3" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="3" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   VerticalAlignment="Center"
+                   Text="Username" />
+        <TextBox Grid.Column="2" Grid.Row="0"
+                 Text="{Binding Path=Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Accent -->
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   VerticalAlignment="Center"
+                   Text="Password" />
+        <PasswordBox Grid.Column="2" Grid.Row="2" 
+                     v:PasswordHelper.Attach="True"
+                     v:PasswordHelper.Password="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <CheckBox Grid.Column="2" Grid.Row="4"
+                  IsChecked="{Binding Path=RememberMe, Mode=TwoWay}">Remember me</CheckBox>
+
+        <Button Grid.Column="2" Grid.Row="6"
+                Style="{DynamicResource AccentedSquareButtonStyle}"
+                Command="{Binding Path=SignInCommand}">Sign In</Button>
+    </Grid>
+</mahctrls:Flyout>
